@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar color="blue-surf" class="navbar">
+    <ion-title>Spots</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="card-background-page">
+
+  <div *ngFor="let spot of spotsList" (click)="onLoadSpot(spot)" class="card-list-spots">
+
+    <ion-card>
+      <img class="img-card-list-spots" src="{{ spot.imagePathSpot }}"/>
+      <div class="card-title">{{ spot.name }}</div>
+    </ion-card>
+
+  </div>
+
+</ion-content>

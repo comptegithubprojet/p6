@@ -1,0 +1,105 @@
+
+<ion-header>
+
+  <ion-navbar color="blue-surf">
+    <ion-title>Recherche</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="contenu-page" >     
+
+  <form #f="ngForm" (ngSubmit)="onSubmitForm(f)">
+
+    <ion-list radio-group [(ngModel)]="hauteurVagues" name="hauteurVagues" class="block-radio">
+
+      <p class="titre-label">Hauteur des vagues</p>
+
+      <ion-item>
+        <ion-label>50cm à 2m</ion-label>
+        <ion-radio name="50-2" value="50cm à 2m" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>2m et +</ion-label>
+        <ion-radio name="2+" value="2m et +"></ion-radio>
+      </ion-item>
+        
+    </ion-list>
+
+
+    <ion-list radio-group [(ngModel)]="directionVent" name="directionVent" class="block-radio">
+
+      <p class="titre-label">Direction du vent</p>
+
+      <ion-item>
+        <ion-label>Est</ion-label>
+        <ion-radio name="est" value="Est" checked></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Ouest</ion-label>
+        <ion-radio name="ouest" value="Ouest"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sud</ion-label>
+        <ion-radio name="sud" value="Sud"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nord</ion-label>
+        <ion-radio name="nord" value="Nord"></ion-radio>
+      </ion-item>
+      
+    </ion-list>
+
+
+    <ion-list radio-group [(ngModel)]="forceVent" name="forceVent" class="block-radio">
+
+      <p class="titre-label">Force du vent</p>
+
+      <ion-item> 
+        <ion-label >Inférieur à 20km/h</ion-label>
+        <ion-radio [checked]='true' name="inf4b" value="Inférieur à 20km/h" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Supérieur à 20km/h</ion-label>
+        <ion-radio name="sup4b" value="Supérieur à 20km/h"></ion-radio>
+      </ion-item>
+        
+    </ion-list>
+
+
+    <ion-list radio-group [(ngModel)]="maree" name="maree" class="block-radio">
+
+      <p class="titre-label">Marée</p>
+
+      <ion-item>
+        <ion-label>Marée haute</ion-label>
+        <ion-radio name="haute" value="Marée haute" checked></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mi-marée</ion-label>
+        <ion-radio name="mi" value="Mi-marée"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Marée basse</ion-label>
+        <ion-radio name="basse" value="Marée basse"></ion-radio>
+      </ion-item>
+        
+    </ion-list>
+
+
+    <div id="btn-submit">
+          <button type="submit" ion-button full color="blue-surf">Rechercher</button>
+    </div> 
+
+
+  </form>
+
+</ion-content>

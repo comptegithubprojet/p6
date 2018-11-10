@@ -1,0 +1,80 @@
+<ion-header>
+
+  <ion-navbar color="blue-surf">
+    <ion-title>{{ spot.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  
+    
+</ion-content>
+
+<ion-content no-padding> 
+
+  <div>
+      <img src="{{ spot.imagePathSpot }}" class="img-spot">
+  </div>
+
+  <div>
+      
+    <div>
+      <h4 class="titre-gris">Description</h4>
+    </div>
+
+    <div class="block-infos-spot">
+      <p>{{ spot.description }}</p>
+    </div>
+      
+  </div>
+
+  <div>
+      <h4 class="titre-gris">Informations</h4>
+  </div>
+
+  <div class="block-infos-spot">
+
+    <div class="block-info-spot">
+        <ion-img src="{{ spot.imagePathTide }}" class="logo"></ion-img>
+        <p class="text-info-spot">Marée - {{ spot.tide }}</p>
+      </div>
+    
+      <div class="block-info-spot">
+        <ion-img src="{{ spot.imagePathWaveBreak }}" class="logo"></ion-img>
+        <p class="text-info-spot">Type de vagues - {{ spot.waveBreak }}</p>
+      </div>
+    
+      <div class="block-info-spot">
+        <ion-img src="{{ spot.imagePathSeaBottom }}" class="logo"></ion-img>
+        <p class="text-info-spot">Fond marin - {{ spot.seaBottom }}</p>
+      </div>
+    
+      <div class="block-info-spot">
+        <ion-img src="{{ spot.imagePathSwellDirection }}" class="logo"></ion-img>
+        <p class="text-info-spot">Direction houle - {{ spot.swellDirection }}</p>
+      </div>
+    
+      <div class="block-info-spot">
+        <ion-img src="{{ spot.imagePathWindDirection }}" class="logo"></ion-img>
+        <p class="text-info-spot">Direction vent - {{ spot.windDirection }}</p>
+      </div>
+      
+      <div class="block-info-spot">
+        <ion-img src="{{ spot.imagePathWaveSize }}" class="logo"></ion-img>
+        <p class="text-info-spot">Taille des vagues - {{ spot.waveSize }}</p>
+      </div>  
+
+  </div>
+
+  <div>
+      <h4 class="titre-gris">Itinéraire</h4>
+  </div>
+
+  <div class="block-itineraire">
+    <button ion-button block (click)="navme(spot.adresse)">Iténéraire {{ spot.name }}</button>
+  </div>
+    
+  
+</ion-content>

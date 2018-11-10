@@ -1,0 +1,49 @@
+page-signle-view {
+
+    .img-spot
+    {
+        width: 100%;
+        border-top: 3px solid #124E5F;
+        border-bottom: 3px solid #124E5F;
+        margin-bottom: 0;
+    }
+
+    .titre-gris
+    {
+        background-color: #F7F7F7;
+        color: #124E5F;
+        text-align: center;
+        margin-top:0px;
+        padding: 5% 5% 5% 5%;
+    }
+
+    .block-infos-spot
+    {
+        padding: 0 5% 0 5%;
+    }
+
+    .block-info-spot
+    {
+        display:flex;
+        margin-bottom:5%;
+    }
+
+    .logo
+    {
+        height: 50px;
+        width: 50px;
+        background-color: white;        
+    }
+    
+    .text-info-spot
+    {
+        padding-left: 2%;
+        width:85%;
+    }
+
+    .block-itineraire
+    {
+        margin-bottom:3%;
+    }
+
+}

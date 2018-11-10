@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="blue-surf">
+    <ion-title>Les meilleurs spots</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="contenu-page">
+
+  <div *ngFor="let spot of spotsList" >
+
+    <ion-card class="card-spot" (click)="onLoadSpot(spot)">
+        <ion-card-title class="titre-card">
+            {{ spot.name }}
+        </ion-card-title>
+        <img src="{{ spot.imagePathSpot }}"/>
+        <ion-card-content>          
+          <button ion-button block>Voir la fiche du spot</button>
+        </ion-card-content>
+      </ion-card>
+
+  </div>
+
+</ion-content>
